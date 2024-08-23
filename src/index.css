@@ -1,0 +1,213 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth scroll-pt-32 md:scroll-pt-40 lg:scroll-pt-52;
+  }
+  body {
+    @apply text-darkColor ltr:font-Roboto rtl:font-Cairo;
+  }
+  ::-webkit-scrollbar {
+    @apply w-[11px] h-[6px];
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-mainColor rounded-[5px];
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-mainColor/80;
+  }
+  ::-webkit-scrollbar-corner {
+    @apply bg-transparent;
+  }
+  .custom-scroll {
+    &::-webkit-scrollbar {
+      @apply w-[6px];
+    }
+    &::-webkit-scrollbar-thumb {
+      @apply bg-mainColor;
+    }
+  }
+  .custom-scroll-0 {
+    &::-webkit-scrollbar {
+      @apply w-[0px] h-[0px];
+    }
+  }
+  ::selection {
+    @apply bg-mainColor text-white;
+  }
+  table {
+    @apply w-full;
+  }
+  .table_responsive {
+    @apply w-full overflow-x-scroll;
+  }
+  td {
+    @apply p-3;
+  }
+}
+
+@layer utilities {
+  .custom-container {
+    @apply w-[90%] sm:w-[600px] md:w-[740px] lg:w-[1000px] xl:w-[1200px] 2xl:w-[78%] relative m-auto;
+  }
+  .flex_center {
+    @apply flex justify-center items-center;
+  }
+  .flex_between {
+    @apply flex justify-between items-center;
+  }
+  .text-4xl-5xl {
+    @apply text-4xl md:text-5xl;
+  }
+  .text-3xl-4xl {
+    @apply text-3xl md:text-4xl;
+  }
+  .text-2xl-3xl {
+    @apply text-2xl md:text-3xl;
+  }
+  .text-xl-2xl {
+    @apply text-xl md:text-2xl;
+  }
+  .text-l-xl {
+    @apply text-lg md:text-xl;
+  }
+  .text-base-l {
+    @apply text-base md:text-lg;
+  }
+  .text-sm-base {
+    @apply text-sm md:text-base;
+  }
+  .text-xs-sm {
+    @apply text-xs md:text-sm;
+  }
+  .p-container {
+    @apply p-4 md:p-6;
+  }
+  .content-container {
+    @apply border-2 rounded-2xl bg-white;
+  }
+  .custom_shadow {
+    @apply shadow-[0px_4px_4px_0px_#c6c6c680];
+  }
+  .custom_shadow2 {
+    @apply shadow-[1px_2px_2px_0px_#c6c6c640];
+  }
+  .custom_widget {
+    @apply flex_center px-4 md:px-5 py-1 md:py-2 rounded-lg;
+  }
+  .custom-rounded {
+    @apply !rounded-s-lg !rounded-e-3xl;
+  }
+  .custom-label {
+    @apply text-base-l font-medium;
+  }
+  .custom-input {
+    @apply outline-none caret-grayColor w-full rounded-2xl py-4 px-6 text-base-l placeholder:text-grayColor bg-grayColor3/30 placeholder:text-base-l;
+  }
+  .custom-button {
+    @apply flex_center text-white bg-mainColor font-medium rounded-xl  border-2 border-mainColor;
+  }
+  .custom-button2 {
+    @apply flex_center border-2 border-grayColor text-mainColor bg-white font-medium rounded-xl;
+  }
+  .hover-button1 {
+    @apply duration-300 hover:bg-mainColor/80 hover:border-mainColor/80;
+  }
+  .hover-button2 {
+    @apply duration-300 hover:bg-mainColor hover:text-white;
+  }
+  .page-header {
+    @apply font-semibold text-l-xl;
+  }
+  .text-shadow-custom {
+    text-shadow: 1px 1px #000;
+  }
+  .grayscale-custom {
+    @apply grayscale-[80%];
+  }
+  .error-text {
+    @apply text-redColor text-sm-base font-semibold mt-1;
+  }
+  .loader_cont {
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+  }
+  .hover-mainColor {
+    @apply duration-300 hover:text-mainColor;
+  }
+}
+
+/* start swiper custom style */
+.swiper-pagination-bullet {
+  width: 18px !important;
+  height: 18px !important;
+}
+.swiper-pagination-bullet {
+  background-color: #fff;
+}
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  font-size: 25px;
+  font-weight: 700;
+}
+@media (max-width: 786px) {
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after,
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+/* end swiper custom style */
+
+/* start datepicker and timepicker style */
+.MuiPickersDay-root.Mui-selected,
+.MuiPickersDay-root.Mui-selected:hover,
+.MuiMultiSectionDigitalClockSection-item.Mui-selected,
+.MuiMultiSectionDigitalClockSection-item.Mui-selected:hover {
+  background-color: #324001 !important;
+  color: #fff !important;
+}
+.MuiPickersDay-root:hover,
+.MuiMultiSectionDigitalClockSection-item:hover {
+  background-color: rgba(255, 187, 89, 0.4) !important;
+}
+/* end datepicker and timepicker style */
+
+/* start react-flag-select style */
+.menu-flags-button {
+  border: 0 !important;
+}
+.react-flag-select button {
+  padding: 0;
+}
+.react-flag-select button span {
+  margin: 0;
+}
+.react-flag-select button:after {
+  border-bottom: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #4d4d4d;
+}
+.react-flag-select button[aria-expanded="true"]:after {
+  border-top: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #4d4d4d;
+}
+.react-flag-select ul {
+  max-height: 280px;
+}
+/* end react-flag-select style */
