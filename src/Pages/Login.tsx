@@ -1,6 +1,5 @@
 import * as yup from "yup";
 import { useTranslation } from "react-i18next";
-import { images } from "../Constants";
 import { useFormik } from "formik";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useState } from "react";
@@ -120,17 +119,7 @@ const Login = () => {
           </form>
         </motion.section>
       </div>
-      <div className="relative w-full max-sm:min-h-[350px] max-md:min-h-[400px] md:flex-1 bg-login bg-cover bg-top">
-        <div
-          className="w-full flex_center px-6 absolute top-1/2 start-1/2 ltr:-translate-x-1/2 rtl:translate-x-1/2 -translate-y-1/2"
-        >
-          <img
-            src={images?.logo2}
-            alt="logo"
-            className="w-48 md:w-60 lg:w-64"
-          />
-        </div>
-      </div>
+      <div className="relative w-full max-sm:min-h-[350px] max-md:min-h-[400px] md:flex-1 bg-login bg-cover bg-top"></div>
     </main>
   )
 }
